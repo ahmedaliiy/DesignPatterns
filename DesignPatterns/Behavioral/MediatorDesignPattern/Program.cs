@@ -1,0 +1,25 @@
+﻿using MediatorDesignPattern.Classes;
+using MediatorDesignPattern.Interfaces;
+using MediatorDesignPattern.Services;
+
+FacebookGroupMediator _facebookMediator = new ConcreteFacebookGroupMediator();
+User Ram = new ConcreteUser(_facebookMediator, "Ram");
+User Dave = new ConcreteUser(_facebookMediator, "Dave");
+User Smith = new ConcreteUser(_facebookMediator, "Smith");
+User Rajesh = new ConcreteUser(_facebookMediator, "Rajesh");
+User Sam = new ConcreteUser(_facebookMediator, "Sam");
+User Pam = new ConcreteUser(_facebookMediator, "Pam");
+User Anurag = new ConcreteUser(_facebookMediator, "Anurag");
+User John = new ConcreteUser(_facebookMediator, "John");
+_facebookMediator.RegisterUser(Ram);
+_facebookMediator.RegisterUser(Dave);
+_facebookMediator.RegisterUser(Smith);
+_facebookMediator.RegisterUser(Rajesh);
+_facebookMediator.RegisterUser(Sam);
+_facebookMediator.RegisterUser(Pam);
+_facebookMediator.RegisterUser(Anurag);
+_facebookMediator.RegisterUser(John);
+Dave.Send("Hello from Dave");
+Console.WriteLine();
+Rajesh.Send("Hi, I'm Rajesh");
+Console.Read();
